@@ -1,7 +1,8 @@
-# TODO: Refactorizar el código para evitar la recursividad.
+# TODO: Refactorizar el código para evitar dependencias
+# recurso para las letras -> https://fsymbols.com/generators/carty/
 
 # Entrada
-def enetradaString(mensaje: str):
+def enetradaString(mensaje: str) -> str:
 
     """ 
     Description: Función para la entrada de datos del programa siempre que sea un string o una cadena
@@ -15,7 +16,7 @@ def enetradaString(mensaje: str):
     """
 
     return input(mensaje)
-def entradaInt(mensaje: str):
+def entradaInt(mensaje: str) -> int:
 
     """ 
     Description: Función para la entrada de datos del programa siempre que sea un entero o int
@@ -29,7 +30,7 @@ def entradaInt(mensaje: str):
     """
 
     return int(input(mensaje))
-def entradaFloat(mensaje: str):
+def entradaFloat(mensaje: str) -> float:
 
     """ 
     Description: Función para la entrada de datos del programa siempre que sea un float o decimal
@@ -45,7 +46,7 @@ def entradaFloat(mensaje: str):
     return float(input(mensaje))
 
 # Lógica
-def nombre() -> str:
+def nombre(nombre: str) -> str:
     """ 
     Description: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
     
@@ -55,12 +56,11 @@ def nombre() -> str:
 
     """
     try:
-        nombre:str = enetradaString("Escribe aquí tu nombre: ")
         return(f"hola {nombre}")
     except TypeError:
         raise TypeError("Algo salió mal, revisa el código")
            
-def importeTotalPorHoras() -> str:
+def importeTotalPorHoras(hora: int, costePorHora: int) -> str:
     
     """ 
     Description: Escribe un programa para pedirle al usuario las horas de trabajo y el precio por hora y calcule el importe total del servicio.
@@ -71,8 +71,6 @@ def importeTotalPorHoras() -> str:
     :rtype: No devuelve nada?
     """
     try:
-        hora: int = entradaInt("Introduce las horas de trabajo: ")
-        costePorHora: int = entradaInt("Introduce el coste por hora: ")
         return("Importe total: ",hora*costePorHora)
     except ValueError:
         print("Error 001: Por favor introduzca un número")
@@ -98,7 +96,7 @@ def asignacion() -> str:
     alto: float = 12.0
     return(f"{ancho/2}\n{ancho//2}\n{alto/3}\n{1 + 2 * 5}") 
  
-def conversionCelsiusFahrenheit() -> str:
+def conversionCelsiusFahrenheit(celsius:int) -> str:
 
     """ 
     Description: Escribe un programa que le pida al usuario una temperatura en grados Celsius, la convierta a grados Fahrenheit e imprima por pantalla la temperatura convertida.
@@ -108,7 +106,6 @@ def conversionCelsiusFahrenheit() -> str:
     :rtype:
     """
     try:
-        celsius:int = entradaInt("Introduce una temperatura en celsuis: ")
         return((celsius * 9 / 5) + 32)
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
@@ -116,7 +113,7 @@ def conversionCelsiusFahrenheit() -> str:
     finally:
         elegirEjercicio()
 
-def ivaAplicado() -> str:
+def ivaAplicado(precio: int, iva: int) -> str:
 
     """ 
     Description: Escribe un programa que pida el importe sin IVA de un artículo y el tipo de IVA a aplicar y calcule e imprima por pantalla el precio final del artículo.
@@ -126,8 +123,6 @@ def ivaAplicado() -> str:
     :rtype:
     """
     try:
-        precio: int = entradaInt("Introduce el precio del producto: ")
-        iva: int = entradaInt("introduce el tipo de iva: ")
         return(f"El producto de {precio}€ + el {iva}% es: {(precio*iva)/100 + precio}€ en total")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
@@ -317,9 +312,18 @@ def calculoInteres() -> str:
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
     
+def panadería():
+    
+        """
+        Description: Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. Escribir un programa que comience leyendo el número de barras vendidas que no son del día. Después el programa debe mostrar el precio habitual de una barra de pan (establecido en el programa como una constante), el descuento que se le hace por no ser fresca y el coste final total de todas las barras no frescas.
+
+        :raises:
+    
+        :rtype:
+        """
+
 # Función principal
 def elegirEjercicio():
-
     """ 
     Description: Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
 
@@ -327,33 +331,48 @@ def elegirEjercicio():
 
     :rtype:
     """
+    textoMenu = """ 
+    ~ 𝟘: 𝔼𝕩𝕚𝕥                                                        
+    ~ 𝟙: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕟𝕠𝕞𝕓𝕣𝕖                                           
+    ~ 𝟚: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕔𝕒𝕝𝕔𝕦𝕝𝕠 𝕕𝕖 𝕚𝕞𝕡𝕠𝕣𝕥𝕖 𝕥𝕠𝕥𝕒𝕝                
+    ~ 𝟛: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕕𝕖𝕕𝕦𝕔𝕔𝕚𝕠́𝕟 𝕕𝕖 𝕒𝕤𝕚𝕘𝕟𝕒𝕔𝕚𝕠𝕟𝕖𝕤            
+    ~ 𝟜: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕔𝕠𝕟𝕧𝕖𝕣𝕤𝕚𝕠́𝕟 𝕕𝕖 𝕔𝕖𝕝𝕤𝕚𝕦𝕤 𝕒 𝕗𝕒𝕙𝕣𝕖𝕟𝕙𝕖𝕚𝕥 
+    ~ 𝟝: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕒𝕡𝕝𝕚𝕔𝕒𝕔𝕚𝕠́𝕟 𝕕𝕖 𝕚𝕧𝕒                    
+    ~ 𝟞: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕕𝕖𝕤𝕘𝕝𝕠𝕤𝕖 𝕕𝕖 𝕡𝕣𝕠𝕕𝕦𝕔𝕥𝕠
+    ~ 𝟟: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕤𝕦𝕞𝕒𝕣 𝟛 𝕟𝕦́𝕞𝕖𝕣𝕠𝕤 𝕔𝕠𝕟 𝟛 𝕧𝕒𝕣𝕚𝕒𝕓𝕝𝕖𝕤
+    ~ 𝟠: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕤𝕦𝕞𝕒𝕣 𝟛 𝕟𝕦́𝕞𝕖𝕣𝕠𝕤 𝕔𝕠𝕟 𝟚 𝕧𝕒𝕣𝕚𝕒𝕓𝕝𝕖𝕤
+    ~ 𝟡: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕤𝕦𝕞𝕒𝕣 𝟛 𝕟𝕦́𝕞𝕖𝕣𝕠𝕤 𝕔𝕠𝕟 𝕤𝕚𝕟 𝕧𝕒𝕣𝕚𝕒𝕓𝕝𝕖𝕤
+    ~ 𝟙𝟘: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕠𝕡𝕖𝕣𝕒𝕔𝕚𝕠́𝕟 𝕒𝕣𝕚𝕥𝕞𝕖́𝕥𝕚𝕔𝕒
+    ~ 𝟙𝟙: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕤𝕦𝕞𝕒𝕣 𝕕𝕖 𝕝𝕠𝕤 𝕟𝕦́𝕞𝕖𝕣𝕠𝕤 𝕙𝕒𝕤𝕥𝕒 𝕟
+    ~ 𝟙𝟚: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕔𝕒𝕝𝕔𝕦𝕝𝕠 𝕕𝕖 𝕀𝕄ℂ
+    ~ 𝟙𝟛: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕕𝕚𝕧𝕚𝕤𝕚𝕠́𝕟
+    ~ 𝟙𝟜: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕡𝕖𝕤𝕠 𝕥𝕠𝕥𝕒𝕝 𝕕𝕖𝕝 𝕡𝕒𝕢𝕦𝕖𝕥𝕖
+    ~ 𝟙𝟝: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕔𝕒𝕝𝕔𝕦𝕝𝕠 𝕕𝕖 𝕚𝕟𝕥𝕖𝕣𝕖𝕤𝕖𝕤
+    ~ 𝟙𝟞: 𝔼𝕛𝕖𝕣𝕔𝕚𝕔𝕚𝕠 𝕕𝕖 𝕝𝕒 𝕡𝕒𝕟𝕒𝕕𝕖𝕣𝕚́𝕒
+    """
 
-    print("---0: Exit---")
-    print("---1: Ejercicio nombre---")
-    print("---2: Ejercicio de calculo de importe total---")
-    print("---3: Ejercicio de deducción de asignaciones---")
-    print("---4: Ejercicio de conversión de celsius a fahrenheit---")
-    print("---5: Ejercicio de aplicación de iva---")
+    print(textoMenu)
 
     try:
-        ejercicio = int(input("Elige un ejercicio del 1-14 \n> "))
+        ejercicio = int(input("Elige un ejercicio del 1-16 \n> "))
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
     except UnboundLocalError:
         raise UnboundLocalError("Error 001: Por favor introduzca un número")
     match ejercicio:
+        # TODO: igual sería interesante una lista de funciones
         case 0:
             exit("Progama finalizado")    
         case 1:
-            salida(nombre())
+            salida(nombre(enetradaString("Escribe aquí tu nombre: ")))
         case 2:
-            salida(importeTotalPorHoras())
+            salida(importeTotalPorHoras(entradaInt("Introduce las horas de trabajo: "), entradaInt("Introduce el coste por hora: ")))
         case 3:
             salida(asignacion())
         case 4:
-            salida(conversionCelsiusFahrenheit())
+            salida(conversionCelsiusFahrenheit(entradaInt("Introduce una temperatura en celsuis: ")))
         case 5:
-            salida(ivaAplicado())
+            salida(ivaAplicado(entradaInt("Introduce el precio del producto: "), entradaInt("introduce el tipo de iva: ")))
         case 6:
             salida(desgloseProducto())
         case 7:
@@ -371,15 +390,15 @@ def elegirEjercicio():
         case 13:
            salida(division())
         case 14:
+            salida(pesoTotal())
+        case 15:
             salida(calculoInteres())
-
-    if ejercicio < 0 or ejercicio > 14:
-        print("Error 003: Introduzca un valor dentro del rango")
-        elegirEjercicio()
+    raise ValueError("Error 003: Introduzca un valor dentro del rango" if ejercicio < 0 or ejercicio > 16 else elegirEjercicio())
 
 # Salida
 def salida(funcion):
     print(funcion)
     elegirEjercicio()
 
-elegirEjercicio()
+if __name__ == "__main__":
+    elegirEjercicio()
