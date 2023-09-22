@@ -93,8 +93,7 @@ marp: true
         color: black;
         padding: 30px 30px;
     }
-     -->
-</style> 
+</style> -->
 ## ¿Cómo se han realizado dichos ejercicios?
 
 > Además de que se han realizado test a todos ellos de forma que comprobar que funcionan correctamente es mucho más fácil de comprobar, simplemente escribiendo la sentencia **`pytest`** en la terminal.
