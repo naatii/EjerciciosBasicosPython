@@ -56,7 +56,8 @@ def nombre(nombre: str) -> str:
 
     """
     try:
-        return(f"hola {nombre}")
+        if nombre != " " and nombre != True:
+            return(f"hola {nombre}")
     except TypeError:
         raise TypeError("Algo salió mal, revisa el código")
            
@@ -127,7 +128,7 @@ def ivaAplicado(precio: int, iva: int) -> str:
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
     
-def desgloseProducto() -> str:
+def desgloseProducto(importeTotal: int) -> str:
 
     """ 
     Description: Escribe un programa que pida el importe final de un artículo y calcule e imprima por pantalla el IVA que se ha pagado y el importe sin IVA (suponiendo que se ha aplicado un tipo de IVA del 10%).
@@ -138,9 +139,8 @@ def desgloseProducto() -> str:
     
     """
 
+    iva: int = 10
     try:
-        iva: int = 10
-        importeTotal: int = entradaInt("Introduzca el importe total del producto: ")
         return(f"Al producto de {importeTotal}€ se ha descontando un iva del 10% (-{(importeTotal*iva)/100}€) es: {importeTotal - (importeTotal*iva)/100 }€ en total")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número") 
@@ -374,7 +374,7 @@ def elegirEjercicio():
         case 5:
             salida(ivaAplicado(entradaInt("Introduce el precio del producto: "), entradaInt("introduce el tipo de iva: ")))
         case 6:
-            salida(desgloseProducto())
+            salida(desgloseProducto(entradaInt("Introduzca el importe total del producto: ")))
         case 7:
             salida(sumaDeTresNumeros())
         case 8:
