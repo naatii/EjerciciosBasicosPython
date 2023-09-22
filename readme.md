@@ -1,7 +1,7 @@
 ---
-marp: true
+# marp: true
 ---
-<style>
+<!-- <style>
     section{
         background: red
     }
@@ -22,12 +22,12 @@ marp: true
         font-size: 40px;
     }
     
-</style>
+</style> -->
 # Ejercicios básicos
 ## (python)
 ###### por: Natalia Cortés Bernal
 ---
-<style scoped>
+<!-- <style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -41,8 +41,12 @@ marp: true
         font-size: 42px;
         color: black
     }
+    blockquote{
+        color: black;
+    }
     
-</style> 
+</style>  -->
 ## ¿En qué consistirán estos ejercicios?
 
 > Éstos, son una serie de ejercicios en los que tendremos que construir nuestros propios algoritmos para desarrollar los conceptos básicos de la programación usando `python`.
+---
