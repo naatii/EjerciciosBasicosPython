@@ -1,5 +1,5 @@
 import pytest
-from ejerciciosBasicosPruebas import *
+from ejerciciosBasicos import *
 
 def test_nombre(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: "natalia") # Simula la entrada de datos por consola
