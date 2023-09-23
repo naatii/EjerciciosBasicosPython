@@ -1,6 +1,6 @@
 # recurso para las letras -> https://fsymbols.com/generators/carty/
 
-# Entrada
+# Entrada   
 def enetradaString(mensaje: str) -> str:
 
     """ 
