@@ -1,4 +1,3 @@
-# TODO: Refactorizar el código para evitar dependencias
 # recurso para las letras -> https://fsymbols.com/generators/carty/
 
 # Entrada
@@ -46,7 +45,7 @@ def entradaFloat(mensaje: str) -> float:
     return float(input(mensaje))
 
 # Lógica
-def nombre(nombre: str) -> str:
+def nombre() -> str:
     """ 
     Description: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
     
@@ -56,12 +55,13 @@ def nombre(nombre: str) -> str:
 
     """
     try:
+        nombre = enetradaString("Escribe aquí tu nombre: ")
         if nombre != " " and nombre != True:
             return(f"hola {nombre}")
     except TypeError:
         raise TypeError("Algo salió mal, revisa el código")
            
-def importeTotalPorHoras(hora: int, costePorHora: int) -> str:
+def importeTotalPorHoras() -> str:
     
     """ 
     Description: Escribe un programa para pedirle al usuario las horas de trabajo y el precio por hora y calcule el importe total del servicio.
@@ -72,6 +72,8 @@ def importeTotalPorHoras(hora: int, costePorHora: int) -> str:
     :rtype: No devuelve nada?
     """
     try:
+        hora: int = entradaInt("Introduce las horas de trabajo: ")
+        costePorHora: int =  entradaInt("Introduce el coste por hora: ")
         return("Importe total: ",hora*costePorHora)
     except ValueError:
         print("Error 001: Por favor introduzca un número")
@@ -97,7 +99,7 @@ def asignacion() -> str:
     alto: float = 12.0
     return(f"{ancho/2}\n{ancho//2}\n{alto/3}\n{1 + 2 * 5}") 
  
-def conversionCelsiusFahrenheit(celsius:int) -> str:
+def conversionCelsiusFahrenheit() -> str:
 
     """ 
     Description: Escribe un programa que le pida al usuario una temperatura en grados Celsius, la convierta a grados Fahrenheit e imprima por pantalla la temperatura convertida.
@@ -107,14 +109,12 @@ def conversionCelsiusFahrenheit(celsius:int) -> str:
     :rtype:
     """
     try:
-        return((celsius * 9 / 5) + 32)
+        celsius: int = entradaInt("Introduce una temperatura en celsuis: ")
+        return(f"La temperatura es de: {(celsius * 9 / 5) + 32}")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
-    
-    finally:
-        elegirEjercicio()
 
-def ivaAplicado(precio: int, iva: int) -> str:
+def ivaAplicado() -> str:
 
     """ 
     Description: Escribe un programa que pida el importe sin IVA de un artículo y el tipo de IVA a aplicar y calcule e imprima por pantalla el precio final del artículo.
@@ -124,11 +124,13 @@ def ivaAplicado(precio: int, iva: int) -> str:
     :rtype:
     """
     try:
+        precio: int = entradaInt("Introduce el precio del producto: ")
+        iva: int = entradaInt("introduce el tipo de iva: ")
         return(f"El producto de {precio}€ + el {iva}% es: {(precio*iva)/100 + precio}€ en total")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
     
-def desgloseProducto(importeTotal: int) -> str:
+def desgloseProducto() -> str:
 
     """ 
     Description: Escribe un programa que pida el importe final de un artículo y calcule e imprima por pantalla el IVA que se ha pagado y el importe sin IVA (suponiendo que se ha aplicado un tipo de IVA del 10%).
@@ -141,6 +143,7 @@ def desgloseProducto(importeTotal: int) -> str:
 
     iva: int = 10
     try:
+        importeTotal: int = entradaInt("Introduzca el importe total del producto: ")
         return(f"Al producto de {importeTotal}€ se ha descontando un iva del 10% (-{(importeTotal*iva)/100}€) es: {importeTotal - (importeTotal*iva)/100 }€ en total")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número") 
@@ -158,7 +161,8 @@ def sumaDeTresNumeros() -> str:
     try:
         primerNumero: int = entradaInt("Introduzca el primer número: ")
         segundoNumero: int = entradaInt("Introduzca el primer número: ")
-        tercerNumero: int = entradaInt("Introduzca el primer número: ")
+        tercerNumero: int =  entradaInt("Introduzca el primer número: ")
+        
         return(f"La suma total es: {primerNumero+segundoNumero+tercerNumero}")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
@@ -174,8 +178,8 @@ def sumaConDosVariables() -> int:
     """
 
     try:
-        numeroUno: int = entradaInt("introduce el primer número: " + entradaInt("Introduce el segudno número: "))
-        numeroDos: int = entradaInt("Introduce el tercer número: ")
+        numeroUno : int = entradaInt("introduce el primer número: " + entradaInt("Introduce el segudno número: "))
+        numeroDos: int =  entradaInt("Introduce el tercer número: ")
         return(numeroUno+numeroDos)
     except ValueError:
         return ValueError("Error 001: Por favor introduzca un número")
@@ -244,7 +248,7 @@ def indiceDeMasaCorporal() -> float:
     """
 
     try:
-        peso: float = entradaFloat("Introduce tu peso en kg: ")
+        peso : float = entradaFloat("Introduce tu peso en kg: ")
         altura: float = entradaFloat("Introduce tu altura en metros: ")
         imc: float = peso/altura
         return(f"Tu índice de masa corporal es: {round(imc, 2)}")
@@ -322,12 +326,7 @@ def panadería():
         :rtype:
         """
 
-# def menu(menu):
-#     for number, function in menu.items():
-#         print(number, function.__name__)
-
-# Función principal
-def elegirEjercicio()-> list:
+def elegirEjercicio():
     """ 
     Description: Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
 
@@ -358,56 +357,23 @@ def elegirEjercicio()-> list:
     
     
     print(textoMenu)
+    functions = [exit, nombre, importeTotalPorHoras, asignacion, conversionCelsiusFahrenheit, ivaAplicado, desgloseProducto, sumaDeTresNumeros, sumaConDosVariables, sumaSinVariables, operacionAritmetica, enterosPositivos, indiceDeMasaCorporal, division, pesoTotal, calculoInteres]
 
     try:
-        
+        menu_items = dict(enumerate(functions, start=0))
         ejercicio = int(input("Elige un ejercicio del 1-16 \n> "))
-        
+        selected_value = menu_items[ejercicio]
+        salida(selected_value())
     except ValueError:
-        raise ValueError("Error 001: Por favor introduzca un número")
+        raise ValueError("Error 003: Introduzca un valor dentro del rango" if ejercicio < 0 or ejercicio > 16 else elegirEjercicio())
     except UnboundLocalError:
         raise UnboundLocalError("Error 001: Por favor introduzca un número")
-    match ejercicio:
-        # TODO: igual sería interesante una lista de funciones
-        # TODO: ¿variables para llamar a salida una sola vez?
-        case 0:
-            exit("Progama finalizado")    
-        case 1:
-            salida(nombre(enetradaString("Escribe aquí tu nombre: ")))
-        case 2:
-            salida(importeTotalPorHoras(entradaInt("Introduce las horas de trabajo: "), entradaInt("Introduce el coste por hora: ")))
-        case 3:
-            salida(asignacion())
-        case 4:
-            salida(conversionCelsiusFahrenheit(entradaInt("Introduce una temperatura en celsuis: ")))
-        case 5:
-            salida(ivaAplicado(entradaInt("Introduce el precio del producto: "), entradaInt("introduce el tipo de iva: ")))
-        case 6:
-            salida(desgloseProducto(entradaInt("Introduzca el importe total del producto: ")))
-        case 7:
-            salida(sumaDeTresNumeros())
-        case 8:
-            salida(sumaConDosVariables())
-        case 9:
-            salida(sumaSinVariables())
-        case 10:
-            salida(operacionAritmetica())
-        case 11:
-            salida(enterosPositivos())
-        case 12:
-            salida(indiceDeMasaCorporal())
-        case 13:
-           salida(division())
-        case 14:
-            salida(pesoTotal())
-        case 15:
-            salida(calculoInteres())
-    raise ValueError("Error 003: Introduzca un valor dentro del rango" if ejercicio < 0 or ejercicio > 16 else elegirEjercicio())
     
 # Salida
 def salida(funcion):
     print(funcion)
     elegirEjercicio()
+
 
 if __name__ == "__main__":
     elegirEjercicio()
