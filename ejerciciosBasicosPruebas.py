@@ -1,4 +1,3 @@
-# TODO: Refactorizar el código para evitar dependencias
 # recurso para las letras -> https://fsymbols.com/generators/carty/
 
 # Entrada
