@@ -24,8 +24,9 @@ marp: true
     }
     
 </style> -->
+
 # Ejercicios básicos
-## (python)
+![python](https://www.feuga.es/wp-content/uploads/2023/01/python-curso-1024x576.jpg)
 ###### por: Natalia Cortés Bernal
 ---
 <!-- <style scoped>
