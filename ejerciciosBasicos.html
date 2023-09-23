@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ejerciciosBasicos</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">ejerciciosBasicos</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnatiw%5Conedrive%5Cescritorio%5Cproyectos%5Cprogramaci%C3%B3n%5Cejercicios%20basicos%20python%5Cejerciciosbasicos.py">c:\users\natiw\onedrive\escritorio\proyectos\programación\ejercicios basicos python\ejerciciosbasicos.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;TODO:&nbsp;Refactorizar&nbsp;el&nbsp;código&nbsp;para&nbsp;evitar&nbsp;dependencias<br>
+#&nbsp;recurso&nbsp;para&nbsp;las&nbsp;letras&nbsp;-&gt;&nbsp;<a href="https://fsymbols.com/generators/carty/">https://fsymbols.com/generators/carty/</a></span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-asignacion"><strong>asignacion</strong></a>() -&gt; str</dt><dd><span class="code">Description:&nbsp;Suponiendo&nbsp;que&nbsp;se&nbsp;han&nbsp;ejecutado&nbsp;las&nbsp;siguientes&nbsp;sentencias&nbsp;de&nbsp;asignación:<br>
+&nbsp;<br>
+Para&nbsp;cada&nbsp;una&nbsp;de&nbsp;las&nbsp;expresiones&nbsp;siguientes,&nbsp;intenta&nbsp;adivinar&nbsp;el&nbsp;valor&nbsp;de&nbsp;la&nbsp;expresión&nbsp;y&nbsp;su&nbsp;tipo&nbsp;sin&nbsp;ejecutarlas&nbsp;en&nbsp;el&nbsp;intérprete:<br>
+&nbsp;<br>
+1.&nbsp;ancho&nbsp;/&nbsp;2&nbsp;&nbsp;La&nbsp;mitad&nbsp;de&nbsp;17<br>
+2.&nbsp;ancho&nbsp;//&nbsp;2&nbsp;modulo&nbsp;de&nbsp;ancho<br>
+3.&nbsp;alto&nbsp;/&nbsp;3&nbsp;alto&nbsp;entre&nbsp;3<br>
+4.&nbsp;1&nbsp;+&nbsp;2&nbsp;*&nbsp;5&nbsp;primero&nbsp;hace&nbsp;la&nbsp;multiplicación&nbsp;y&nbsp;luego&nbsp;la&nbsp;suma<br>
+&nbsp;<br>
+:raises:&nbsp;todo&nbsp;está&nbsp;definido&nbsp;no&nbsp;es&nbsp;necesario&nbsp;una&nbsp;captura.<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-calculoInteres"><strong>calculoInteres</strong></a>() -&gt; str</dt><dd><span class="code">Description:&nbsp;Imagina&nbsp;que&nbsp;acabas&nbsp;de&nbsp;abrir&nbsp;una&nbsp;nueva&nbsp;cuenta&nbsp;de&nbsp;ahorros&nbsp;que&nbsp;te&nbsp;ofrece&nbsp;el&nbsp;4%&nbsp;de&nbsp;interés&nbsp;al&nbsp;año.&nbsp;Estos&nbsp;ahorros&nbsp;debido&nbsp;a&nbsp;intereses,&nbsp;que&nbsp;no&nbsp;se&nbsp;cobran&nbsp;hasta&nbsp;finales&nbsp;de&nbsp;año,&nbsp;se&nbsp;te&nbsp;añaden&nbsp;al&nbsp;balance&nbsp;final&nbsp;de&nbsp;tu&nbsp;cuenta&nbsp;de&nbsp;ahorros.&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;comience&nbsp;leyendo&nbsp;la&nbsp;cantidad&nbsp;de&nbsp;dinero&nbsp;depositada&nbsp;en&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;ahorros,&nbsp;introducida&nbsp;por&nbsp;el&nbsp;usuario.&nbsp;Después&nbsp;el&nbsp;programa&nbsp;debe&nbsp;calcular&nbsp;y&nbsp;mostrar&nbsp;por&nbsp;pantalla&nbsp;la&nbsp;cantidad&nbsp;de&nbsp;ahorros&nbsp;tras&nbsp;el&nbsp;primer,&nbsp;segundo&nbsp;y&nbsp;tercer&nbsp;años.&nbsp;Redondear&nbsp;cada&nbsp;cantidad&nbsp;a&nbsp;dos&nbsp;decimales.<br>
+&nbsp;<br>
+Calcula&nbsp;el&nbsp;interés:&nbsp;capital&nbsp;*&nbsp;(1&nbsp;+&nbsp;interes)<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-conversionCelsiusFahrenheit"><strong>conversionCelsiusFahrenheit</strong></a>(celsius: int) -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;que&nbsp;le&nbsp;pida&nbsp;al&nbsp;usuario&nbsp;una&nbsp;temperatura&nbsp;en&nbsp;grados&nbsp;Celsius,&nbsp;la&nbsp;convierta&nbsp;a&nbsp;grados&nbsp;Fahrenheit&nbsp;e&nbsp;imprima&nbsp;por&nbsp;pantalla&nbsp;la&nbsp;temperatura&nbsp;convertida.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-desgloseProducto"><strong>desgloseProducto</strong></a>(importeTotal: int) -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;que&nbsp;pida&nbsp;el&nbsp;importe&nbsp;final&nbsp;de&nbsp;un&nbsp;artículo&nbsp;y&nbsp;calcule&nbsp;e&nbsp;imprima&nbsp;por&nbsp;pantalla&nbsp;el&nbsp;IVA&nbsp;que&nbsp;se&nbsp;ha&nbsp;pagado&nbsp;y&nbsp;el&nbsp;importe&nbsp;sin&nbsp;IVA&nbsp;(suponiendo&nbsp;que&nbsp;se&nbsp;ha&nbsp;aplicado&nbsp;un&nbsp;tipo&nbsp;de&nbsp;IVA&nbsp;del&nbsp;10%).<br>
+&nbsp;<br>
+:raises:&nbsp;ValueError<br>
+&nbsp;<br>
+:rtype:&nbsp;nada?</span></dd></dl>
+ <dl><dt><a name="-division"><strong>division</strong></a>() -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;pida&nbsp;al&nbsp;usuario&nbsp;dos&nbsp;números&nbsp;enteros&nbsp;y&nbsp;muestre&nbsp;por&nbsp;pantalla&nbsp;los&nbsp;siguienteS:&nbsp;"la&nbsp;división&nbsp;de&nbsp;n&nbsp;entre&nbsp;m&nbsp;da&nbsp;un&nbsp;cociente&nbsp;c&nbsp;y&nbsp;un&nbsp;resto&nbsp;r",&nbsp;donde&nbsp;n&nbsp;y&nbsp;m&nbsp;son&nbsp;los&nbsp;números&nbsp;introducidos&nbsp;por&nbsp;el&nbsp;usuario,&nbsp;y&nbsp;c&nbsp;y&nbsp;r&nbsp;son&nbsp;el&nbsp;cociente&nbsp;y&nbsp;el&nbsp;resto&nbsp;de&nbsp;la&nbsp;división&nbsp;entera&nbsp;respectivamente.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-elegirEjercicio"><strong>elegirEjercicio</strong></a>()</dt><dd><span class="code">Description:&nbsp;Menú&nbsp;para&nbsp;la&nbsp;selección&nbsp;de&nbsp;ejercicios&nbsp;a&nbsp;elección&nbsp;del&nbsp;usuario&nbsp;y&nbsp;salida&nbsp;del&nbsp;programa&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;usuario&nbsp;así&nbsp;lo&nbsp;desee.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-enetradaString"><strong>enetradaString</strong></a>(mensaje: str) -&gt; str</dt><dd><span class="code">Description:&nbsp;Función&nbsp;para&nbsp;la&nbsp;entrada&nbsp;de&nbsp;datos&nbsp;del&nbsp;programa&nbsp;siempre&nbsp;que&nbsp;sea&nbsp;un&nbsp;string&nbsp;o&nbsp;una&nbsp;cadena<br>
+&nbsp;<br>
+:type&nbsp;mensaje:str:<br>
+:param&nbsp;mensaje:str:<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-enterosPositivos"><strong>enterosPositivos</strong></a>() -&gt; int</dt><dd><span class="code">Description:&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;lea&nbsp;un&nbsp;entero&nbsp;positivo,&nbsp;n,&nbsp;introducido&nbsp;por&nbsp;el&nbsp;usuario&nbsp;y&nbsp;después&nbsp;muestre&nbsp;en&nbsp;pantalla&nbsp;la&nbsp;suma&nbsp;de&nbsp;todos&nbsp;los&nbsp;enteros&nbsp;desde&nbsp;1&nbsp;hasta&nbsp;n.&nbsp;La&nbsp;suma&nbsp;de&nbsp;los&nbsp;n&nbsp;primeros&nbsp;enteros&nbsp;positivos&nbsp;puede&nbsp;ser&nbsp;calculada&nbsp;de&nbsp;la&nbsp;siguiente&nbsp;forma:<br>
+&nbsp;<br>
+suma&nbsp;=&nbsp;n(n+1)/2<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-entradaFloat"><strong>entradaFloat</strong></a>(mensaje: str) -&gt; float</dt><dd><span class="code">Description:&nbsp;Función&nbsp;para&nbsp;la&nbsp;entrada&nbsp;de&nbsp;datos&nbsp;del&nbsp;programa&nbsp;siempre&nbsp;que&nbsp;sea&nbsp;un&nbsp;float&nbsp;o&nbsp;decimal<br>
+&nbsp;<br>
+:type&nbsp;mensaje:str:<br>
+:param&nbsp;mensaje:str:<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-entradaInt"><strong>entradaInt</strong></a>(mensaje: str) -&gt; int</dt><dd><span class="code">Description:&nbsp;Función&nbsp;para&nbsp;la&nbsp;entrada&nbsp;de&nbsp;datos&nbsp;del&nbsp;programa&nbsp;siempre&nbsp;que&nbsp;sea&nbsp;un&nbsp;entero&nbsp;o&nbsp;int<br>
+&nbsp;<br>
+:type&nbsp;mensaje:str:<br>
+:param&nbsp;mensaje:str:<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-importeTotalPorHoras"><strong>importeTotalPorHoras</strong></a>(hora: int, costePorHora: int) -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;para&nbsp;pedirle&nbsp;al&nbsp;usuario&nbsp;las&nbsp;horas&nbsp;de&nbsp;trabajo&nbsp;y&nbsp;el&nbsp;precio&nbsp;por&nbsp;hora&nbsp;y&nbsp;calcule&nbsp;el&nbsp;importe&nbsp;total&nbsp;del&nbsp;servicio.<br>
+&nbsp;<br>
+:raises:&nbsp;ValueError:&nbsp;por&nbsp;si&nbsp;no&nbsp;introduce&nbsp;un&nbsp;enetero.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;por&nbsp;si&nbsp;hay&nbsp;algún&nbsp;error&nbsp;que&nbsp;no&nbsp;he&nbsp;contemplado.<br>
+&nbsp;<br>
+:rtype:&nbsp;No&nbsp;devuelve&nbsp;nada?</span></dd></dl>
+ <dl><dt><a name="-indiceDeMasaCorporal"><strong>indiceDeMasaCorporal</strong></a>() -&gt; float</dt><dd><span class="code">Description:&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;pida&nbsp;al&nbsp;usuario&nbsp;su&nbsp;peso&nbsp;(en&nbsp;kg)&nbsp;y&nbsp;estatura&nbsp;(en&nbsp;metros),&nbsp;calcule&nbsp;el&nbsp;índice&nbsp;de&nbsp;masa&nbsp;corporal&nbsp;y&nbsp;lo&nbsp;almacene&nbsp;en&nbsp;una&nbsp;variable,&nbsp;y&nbsp;muestre&nbsp;por&nbsp;pantalla&nbsp;la&nbsp;frase&nbsp;Tu&nbsp;índice&nbsp;de&nbsp;masa&nbsp;corporal&nbsp;es&nbsp;donde&nbsp;es&nbsp;el&nbsp;índice&nbsp;de&nbsp;masa&nbsp;corporal&nbsp;calculado&nbsp;redondeado&nbsp;con&nbsp;dos&nbsp;decimales.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-ivaAplicado"><strong>ivaAplicado</strong></a>(precio: int, iva: int) -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;que&nbsp;pida&nbsp;el&nbsp;importe&nbsp;sin&nbsp;IVA&nbsp;de&nbsp;un&nbsp;artículo&nbsp;y&nbsp;el&nbsp;tipo&nbsp;de&nbsp;IVA&nbsp;a&nbsp;aplicar&nbsp;y&nbsp;calcule&nbsp;e&nbsp;imprima&nbsp;por&nbsp;pantalla&nbsp;el&nbsp;precio&nbsp;final&nbsp;del&nbsp;artículo.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-nombre"><strong>nombre</strong></a>(nombre: str) -&gt; str</dt><dd><span class="code">Description:&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;que&nbsp;pida&nbsp;el&nbsp;nombre&nbsp;del&nbsp;usuario&nbsp;para&nbsp;luego&nbsp;darle&nbsp;la&nbsp;bienvenida.<br>
+&nbsp;<br>
+:raises:&nbsp;except&nbsp;de&nbsp;prueba&nbsp;por&nbsp;si&nbsp;algo&nbsp;sale&nbsp;mal<br>
+&nbsp;<br>
+:rtype:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-operacionAritmetica"><strong>operacionAritmetica</strong></a>() -&gt; float</dt><dd><span class="code">Description:&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;muestre&nbsp;por&nbsp;pantalla&nbsp;el&nbsp;resultado&nbsp;de&nbsp;la&nbsp;siguiente&nbsp;operación&nbsp;aritmética:&nbsp;<br>
+&nbsp;<br>
+(3+2/2*5)^2<br>
+&nbsp;<br>
+&nbsp;<br>
+:raises:&nbsp;no&nbsp;es&nbsp;necesario?<br>
+&nbsp;<br>
+:rtype:&nbsp;nada?</span></dd></dl>
+ <dl><dt><a name="-panadería"><strong>panadería</strong></a>()</dt><dd><span class="code">Description:&nbsp;Una&nbsp;panadería&nbsp;vende&nbsp;barras&nbsp;de&nbsp;pan&nbsp;a&nbsp;3.49€&nbsp;cada&nbsp;una.&nbsp;El&nbsp;pan&nbsp;que&nbsp;no&nbsp;es&nbsp;el&nbsp;día&nbsp;tiene&nbsp;un&nbsp;descuento&nbsp;del&nbsp;60%.&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;comience&nbsp;leyendo&nbsp;el&nbsp;número&nbsp;de&nbsp;barras&nbsp;vendidas&nbsp;que&nbsp;no&nbsp;son&nbsp;del&nbsp;día.&nbsp;Después&nbsp;el&nbsp;programa&nbsp;debe&nbsp;mostrar&nbsp;el&nbsp;precio&nbsp;habitual&nbsp;de&nbsp;una&nbsp;barra&nbsp;de&nbsp;pan&nbsp;(establecido&nbsp;en&nbsp;el&nbsp;programa&nbsp;como&nbsp;una&nbsp;constante),&nbsp;el&nbsp;descuento&nbsp;que&nbsp;se&nbsp;le&nbsp;hace&nbsp;por&nbsp;no&nbsp;ser&nbsp;fresca&nbsp;y&nbsp;el&nbsp;coste&nbsp;final&nbsp;total&nbsp;de&nbsp;todas&nbsp;las&nbsp;barras&nbsp;no&nbsp;frescas.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-pesoTotal"><strong>pesoTotal</strong></a>() -&gt; str</dt><dd><span class="code">Description:&nbsp;Una&nbsp;juguetería&nbsp;tiene&nbsp;mucho&nbsp;éxito&nbsp;en&nbsp;dos&nbsp;de&nbsp;sus&nbsp;productos:&nbsp;payasos&nbsp;y&nbsp;muñecas.&nbsp;Suele&nbsp;hacer&nbsp;venta&nbsp;por&nbsp;correo&nbsp;y&nbsp;la&nbsp;empresa&nbsp;de&nbsp;logística&nbsp;les&nbsp;cobra&nbsp;por&nbsp;peso&nbsp;de&nbsp;cada&nbsp;paquete&nbsp;así&nbsp;que&nbsp;deben&nbsp;calcular&nbsp;el&nbsp;peso&nbsp;de&nbsp;los&nbsp;payasos&nbsp;y&nbsp;muñecas&nbsp;que&nbsp;saldrán&nbsp;en&nbsp;cada&nbsp;paquete&nbsp;a&nbsp;demanda.&nbsp;Cada&nbsp;payaso&nbsp;pesa&nbsp;112&nbsp;g&nbsp;y&nbsp;cada&nbsp;muñeca&nbsp;75&nbsp;g.&nbsp;Escribir&nbsp;un&nbsp;programa&nbsp;que&nbsp;lea&nbsp;el&nbsp;número&nbsp;de&nbsp;payasos&nbsp;y&nbsp;muñecas&nbsp;vendidos&nbsp;en&nbsp;el&nbsp;último&nbsp;pedido&nbsp;y&nbsp;calcule&nbsp;el&nbsp;peso&nbsp;total&nbsp;del&nbsp;paquete&nbsp;que&nbsp;será&nbsp;enviado.<br>
+&nbsp;<br>
+:raises:<br>
+&nbsp;<br>
+:rtype:</span></dd></dl>
+ <dl><dt><a name="-salida"><strong>salida</strong></a>(funcion)</dt><dd><span class="code">#&nbsp;Salida</span></dd></dl>
+ <dl><dt><a name="-sumaConDosVariables"><strong>sumaConDosVariables</strong></a>() -&gt; int</dt><dd><span class="code">Description:&nbsp;Escribir&nbsp;el&nbsp;programa&nbsp;del&nbsp;ejercicio&nbsp;1.7&nbsp;usando&nbsp;solamente&nbsp;dos&nbsp;variables&nbsp;diferentes.<br>
+&nbsp;<br>
+:raises:&nbsp;ValueError<br>
+&nbsp;<br>
+:rtype:&nbsp;nada?</span></dd></dl>
+ <dl><dt><a name="-sumaDeTresNumeros"><strong>sumaDeTresNumeros</strong></a>() -&gt; str</dt><dd><span class="code">Description:&nbsp;&nbsp;Escribe&nbsp;un&nbsp;programa&nbsp;que&nbsp;solicite&nbsp;tres&nbsp;números&nbsp;al&nbsp;usuario&nbsp;y&nbsp;calcule&nbsp;e&nbsp;imprima&nbsp;por&nbsp;pantalla&nbsp;su&nbsp;suma.<br>
+&nbsp;<br>
+:raises:&nbsp;ValueError<br>
+&nbsp;<br>
+:rtype:&nbsp;nada?</span></dd></dl>
+ <dl><dt><a name="-sumaSinVariables"><strong>sumaSinVariables</strong></a>()</dt><dd><span class="code">Description:&nbsp;¿Es&nbsp;posible&nbsp;escribir&nbsp;el&nbsp;programa&nbsp;del&nbsp;ejercicio&nbsp;1.7&nbsp;sin&nbsp;usar&nbsp;variables?&nbsp;Inténtalo.<br>
+&nbsp;<br>
+:raises:&nbsp;ValueError<br>
+&nbsp;<br>
+:rtype:&nbsp;nada?</span></dd></dl>
+</td></tr></table>
+</body></html>
