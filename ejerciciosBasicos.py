@@ -1,87 +1,85 @@
-# recurso para las letras -> https://fsymbols.com/generators/carty/
-
+# TODO: Constantes en mayúsuclas
 # Entrada   
 def enetradaString(mensaje: str) -> str:
+    """Lee la entrada de datos de tipo String
+    ---
 
-    """ 
-    Description: Función para la entrada de datos del programa siempre que sea un string o una cadena
+    ---
+    Args:
+        mensaje (str): El mensaje que recibe el usuario para los diferentes ejercicios
 
-    :type mensaje:str:
-    :param mensaje:str:
-
-    :raises:
-
-    :rtype:
+    Returns:
+        str: De devuelve el valor para la entrada de datos String
     """
 
     return input(mensaje)
 def entradaInt(mensaje: str) -> int:
+    """Lee la entrada de datos de tipo entero
+    ---
 
-    """ 
-    Description: Función para la entrada de datos del programa siempre que sea un entero o int
+    ---
+    Args:
+        mensaje (str): El mensaje que recibe el usuario para los diferentes ejercicios
 
-    :type mensaje:str:
-    :param mensaje:str:
-
-    :raises:
-
-    :rtype:
+    Returns:
+        int: De devuelve el valor para la entrada de datos de tipo int
     """
 
     return int(input(mensaje))
 def entradaFloat(mensaje: str) -> float:
+    """Lee la entrada de datos de tipo entero
+    ---
 
-    """ 
-    Description: Función para la entrada de datos del programa siempre que sea un float o decimal
+    Args:
+        mensaje (str): El mensaje que recibe el usuario para los diferentes ejercicios
 
-    :type mensaje:str:
-    :param mensaje:str:
-
-    :raises:
-
-    :rtype:
+    Returns:
+        float: De devuelve el valor para la entrada de datos de tipo float
     """
+
 
     return float(input(mensaje))
 
 # Lógica
 def nombre() -> str:
-    """ 
-    Description: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
-    
-    :raises: except de prueba por si algo sale mal
+    """Description: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
+    ---
 
-    :rtype: str
+    ---
+    Raises:
+        TypeError: Realmente no sé si sería correcto el uso del TypeError aquí.
 
-    """
+    Returns:
+        str: Retorno de la frase esperada según las especificaciones del ejercicio.
+    """        
+
     try:
-        nombre = enetradaString("Escribe aquí tu nombre: ")
+        nombre:str = enetradaString("Escribe aquí tu nombre: ")
         if nombre != " " and nombre != True:
             return(f"hola {nombre}")
     except TypeError:
         raise TypeError("Algo salió mal, revisa el código")
            
 def importeTotalPorHoras() -> str:
-    
-    """ 
-    Description: Escribe un programa para pedirle al usuario las horas de trabajo y el precio por hora y calcule el importe total del servicio.
-    
-    :raises: ValueError: por si no introduce un enetero.
-            else por si hay algún error que no he contemplado.
+    """Escribe un programa para pedirle al usuario las horas de trabajo y el precio por hora y calcule el importe total del servicio.
+    ---
 
-    :rtype: No devuelve nada?
-    """
+    Raises:
+        ValueError: por si no introduce un enetero.
+
+    Returns:
+        str: Retorno del importe total del servicio.
+    """    
+    
     try:
         hora: int = entradaInt("Introduce las horas de trabajo: ")
         costePorHora: int =  entradaInt("Introduce el coste por hora: ")
         return("Importe total: ",hora*costePorHora)
     except ValueError:
-        print("Error 001: Por favor introduzca un número")
+        raise ValueError("Error 001: Por favor introduzca un número")
 
 def asignacion() -> str:
-
-    """ 
-    Description: Suponiendo que se han ejecutado las siguientes sentencias de asignación:
+    """Suponiendo que se han ejecutado las siguientes sentencias de asignación:
 
     Para cada una de las expresiones siguientes, intenta adivinar el valor de la expresión y su tipo sin ejecutarlas en el intérprete:
 
@@ -89,25 +87,29 @@ def asignacion() -> str:
     2. ancho // 2 modulo de ancho
     3. alto / 3 alto entre 3
     4. 1 + 2 * 5 primero hace la multiplicación y luego la suma
+    ---
 
-    :raises: todo está definido no es necesario una captura.
-
-    :rtype:
-    """
+    Returns:
+        str: diferentes operaciones con el ancho y el alto para intentar adivinar que devuelve antes de verlo.
+    """    
+    
 
     ancho: int = 17
     alto: float = 12.0
     return(f"{ancho/2}\n{ancho//2}\n{alto/3}\n{1 + 2 * 5}") 
  
 def conversionCelsiusFahrenheit() -> str:
+    """Escribe un programa que le pida al usuario una temperatura en grados Celsius, la convierta a grados Fahrenheit e imprima por pantalla la temperatura convertida.
+    ---
 
-    """ 
-    Description: Escribe un programa que le pida al usuario una temperatura en grados Celsius, la convierta a grados Fahrenheit e imprima por pantalla la temperatura convertida.
+    ---
+    Raises:
+        ValueError: Control para la entrada de datos de tipo int.
 
-    :raises:
+    Returns:
+        str: Temperatura en Fahrenheit.
+    """    
 
-    :rtype:
-    """
     try:
         celsius: int = entradaInt("Introduce una temperatura en celsuis: ")
         return(f"La temperatura es de: {(celsius * 9 / 5) + 32}")
@@ -115,14 +117,17 @@ def conversionCelsiusFahrenheit() -> str:
         raise ValueError("Error 001: Por favor introduzca un número")
 
 def ivaAplicado() -> str:
+    """Escribe un programa que pida el importe sin IVA de un artículo y el tipo de IVA a aplicar y calcule e imprima por pantalla el precio final del artículo.
+    ---
 
-    """ 
-    Description: Escribe un programa que pida el importe sin IVA de un artículo y el tipo de IVA a aplicar y calcule e imprima por pantalla el precio final del artículo.
+    ---
+    Raises:
+        ValueError: Control para la entrada de datos de tipo int.
 
-    :raises:
+    Returns:
+        str: Precio con iva aplicado según el usuario.
+    """    
 
-    :rtype:
-    """
     try:
         precio: int = entradaInt("Introduce el precio del producto: ")
         iva: int = entradaInt("introduce el tipo de iva: ")
@@ -131,14 +136,13 @@ def ivaAplicado() -> str:
         raise ValueError("Error 001: Por favor introduzca un número")
     
 def desgloseProducto() -> str:
+    """Escribe un programa que pida el importe final de un artículo y calcule e imprima por pantalla el IVA que se ha pagado y el importe sin IVA (suponiendo que se ha aplicado un tipo de IVA del 10%).
 
-    """ 
-    Description: Escribe un programa que pida el importe final de un artículo y calcule e imprima por pantalla el IVA que se ha pagado y el importe sin IVA (suponiendo que se ha aplicado un tipo de IVA del 10%).
+    Raises:
+        ValueError: Captura de error para la entrada de datos de tipo int
 
-    :raises: ValueError
-
-    :rtype: nada?
-    
+    Returns:
+        str: Desglose del producto con iva mostrando el iva y el precio sin éste.
     """
 
     iva: int = 10
@@ -149,14 +153,15 @@ def desgloseProducto() -> str:
         raise ValueError("Error 001: Por favor introduzca un número") 
     
 def sumaDeTresNumeros() -> str:
+    """Escribe un programa que solicite tres números al usuario y calcule e imprima por pantalla su suma.
 
-    """ 
-    Description:  Escribe un programa que solicite tres números al usuario y calcule e imprima por pantalla su suma.
+    Raises:
+        ValueError: Captura de errores de entrada de datos de tipo int.
 
-    :raises: ValueError
-
-    :rtype: nada?
-    """
+    Returns:
+        str: Las suma de 3 números introducidos por el usuario.
+    """    
+    
 
     try:
         primerNumero: int = entradaInt("Introduzca el primer número: ")
@@ -168,13 +173,13 @@ def sumaDeTresNumeros() -> str:
         raise ValueError("Error 001: Por favor introduzca un número")
     
 def sumaConDosVariables() -> int:
+    """Escribir el programa del ejercicio 1.7 usando solamente dos variables diferentes.
 
-    """ 
-    Description: Escribir el programa del ejercicio 1.7 usando solamente dos variables diferentes.
+    Raises:
+        ValueError: Captura de error para la entrada de datos de tipo int.
 
-    :raises: ValueError
-
-    :rtype: nada?
+    Returns:
+        int: La suma de 3 números con solo 2 variables.
     """
 
     try:
@@ -182,16 +187,16 @@ def sumaConDosVariables() -> int:
         numeroDos: int =  entradaInt("Introduce el tercer número: ")
         return(numeroUno+numeroDos)
     except ValueError:
-        return ValueError("Error 001: Por favor introduzca un número")
+        raise ValueError("Error 001: Por favor introduzca un número")
     
-def sumaSinVariables():
+def sumaSinVariables() -> str:
+    """¿Es posible escribir el programa del ejercicio 1.7 sin usar variables? Inténtalo
 
-    """ 
-    Description: ¿Es posible escribir el programa del ejercicio 1.7 sin usar variables? Inténtalo.
+    Raises:
+        ValueError: Captura de errores para la entrada de datos de tipo int.
 
-    :raises: ValueError
-
-    :rtype: nada?
+    Returns:
+        str: La suma de 3 números sin utilizar variables.
     """
 
     try:
@@ -200,32 +205,28 @@ def sumaSinVariables():
         raise ValueError("Error 001: Por favor introduzca un número")
     
 def operacionAritmetica() -> float:
-
-    """ 
-    Description: Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética: 
+    """Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética: 
 
     (3+2/2*5)^2
 
-
-    :raises: no es necesario?
-
-    :rtype: nada?
-    """
+    Returns:
+        float: Resultado de realizar la ecuación mencionada en la descripción.
+    """    
 
     return(((3+2)/(2*5))**2)
 
 def enterosPositivos() -> int:
-
-    """ 
-    Description: Escribir un programa que lea un entero positivo, n, introducido por el usuario y después muestre en pantalla la suma de todos los enteros desde 1 hasta n. La suma de los n primeros enteros positivos puede ser calculada de la siguiente forma:
+    """Escribir un programa que lea un entero positivo, n, introducido por el usuario y después muestre en pantalla la suma de todos los enteros desde 1 hasta n. La suma de los n primeros enteros positivos puede ser calculada de la siguiente forma:
 
     suma = n(n+1)/2
 
-    :raises:
+    Raises:
+        TypeError: Error de creación propia ya que el número según las especificaciones del ejercicio no podía ser negativo.
+        ValueError: Captura de error para la entrada de datos de tipo int.
 
-    :rtype:
+    Returns:
+        int: Sumatorio de todos los números hasta el número introducido por el usuario.
     """
-
     try:
         numero: int = entradaInt("Introduce un número: ")
         if numero < 0:
@@ -238,15 +239,14 @@ def enterosPositivos() -> int:
         raise(error)
 
 def indiceDeMasaCorporal() -> float:
+    """Escribir un programa que pida al usuario su peso (en kg) y estatura (en metros), calcule el índice de masa corporal y lo almacene en una variable, y muestre por pantalla la frase Tu índice de masa corporal es donde es el índice de masa corporal calculado redondeado con dos decimales.
 
-    """ 
-    Description: Escribir un programa que pida al usuario su peso (en kg) y estatura (en metros), calcule el índice de masa corporal y lo almacene en una variable, y muestre por pantalla la frase Tu índice de masa corporal es donde es el índice de masa corporal calculado redondeado con dos decimales.
+    Raises:
+        ZeroDivisionError: Captura de error por si el usuario introduce un cero en el dividendo.
 
-    :raises:
-
-    :rtype:
-    """
-
+    Returns:
+        float: Retorno del IMC.
+    """    
     try:
         peso : float = entradaFloat("Introduce tu peso en kg: ")
         altura: float = entradaFloat("Introduce tu altura en metros: ")
@@ -258,14 +258,15 @@ def indiceDeMasaCorporal() -> float:
         raise ZeroDivisionError("La altura no puede ser 0.")
     
 def division() -> str:
+    """Escribir un programa que pida al usuario dos números enteros y muestre por pantalla los siguienteS: "la división de n entre m da un cociente c y un resto r", donde n y m son los números introducidos por el usuario, y c y r son el cociente y el resto de la división entera respectivamente.
 
-    """ 
-    Description: Escribir un programa que pida al usuario dos números enteros y muestre por pantalla los siguienteS: "la división de n entre m da un cociente c y un resto r", donde n y m son los números introducidos por el usuario, y c y r son el cociente y el resto de la división entera respectivamente.
+    Raises:
+        ValueError: Captura de error para la entrada de datos de tipo int.
+        ZeroDivisionError: Captura de error por si el usuario introduce un 0 en el dividendo.
 
-    :raises:
-
-    :rtype:
-    """
+    Returns:
+        str: Devuelve el cociente y el resto de la división.
+    """    
     try:
         numeroUno = entradaInt("Introduzca el primer número: ")
         numeroDos = entradaInt("Introduzca el segundo número: ")
@@ -273,16 +274,19 @@ def division() -> str:
         return(f"El cociente de la división es: {numeroUno/numeroDos}, y el resto es {numeroUno%numeroDos}")
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
+    except ZeroDivisionError:
+        raise ZeroDivisionError("La altura no puede ser 0.")
     
 def pesoTotal() -> str:
+    """Una juguetería tiene mucho éxito en dos de sus productos: payasos y muñecas. Suele hacer venta por correo y la empresa de logística les cobra por peso de cada paquete así que deben calcular el peso de los payasos y muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g. Escribir un programa que lea el número de payasos y muñecas vendidos en el último pedido y calcule el peso total del paquete que será enviado.
 
-    """ 
-    Description: Una juguetería tiene mucho éxito en dos de sus productos: payasos y muñecas. Suele hacer venta por correo y la empresa de logística les cobra por peso de cada paquete así que deben calcular el peso de los payasos y muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g. Escribir un programa que lea el número de payasos y muñecas vendidos en el último pedido y calcule el peso total del paquete que será enviado.
+    Raises:
+        ValueError: Captura de error para la entrada de datos del tipo int.
 
-    :raises:
-
-    :rtype:
-    """
+    Returns:
+        str: El peso total del paquete que será enviado.
+    """    
+    
     payaso: int = 112
     muñeca: int = 75
 
@@ -295,16 +299,17 @@ def pesoTotal() -> str:
         raise ValueError("Error 001: Por favor introduzca un número")
     
 def calculoInteres() -> str:
-
-    """ 
-    Description: Imagina que acabas de abrir una nueva cuenta de ahorros que te ofrece el 4% de interés al año. Estos ahorros debido a intereses, que no se cobran hasta finales de año, se te añaden al balance final de tu cuenta de ahorros. Escribir un programa que comience leyendo la cantidad de dinero depositada en la cuenta de ahorros, introducida por el usuario. Después el programa debe calcular y mostrar por pantalla la cantidad de ahorros tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.
+    """Imagina que acabas de abrir una nueva cuenta de ahorros que te ofrece el 4% de interés al año. Estos ahorros debido a intereses, que no se cobran hasta finales de año, se te añaden al balance final de tu cuenta de ahorros. Escribir un programa que comience leyendo la cantidad de dinero depositada en la cuenta de ahorros, introducida por el usuario. Después el programa debe calcular y mostrar por pantalla la cantidad de ahorros tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.
 
     Calcula el interés: capital * (1 + interes)
 
-    :raises:
+    Raises:
+        ValueError: Captura de error para la entrada de datos del tipo int.
 
-    :rtype:
-    """
+    Returns:
+        str: Interés del depósito introducido por el usuario tras 1 año, 2 y 3 años respectivamente
+    """    
+    
 
     interes: int = 4
     primerAño: int = 1
@@ -316,24 +321,52 @@ def calculoInteres() -> str:
     except ValueError:
         raise ValueError("Error 001: Por favor introduzca un número")
     
-def panadería():
-    
-        """
-        Description: Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. Escribir un programa que comience leyendo el número de barras vendidas que no son del día. Después el programa debe mostrar el precio habitual de una barra de pan (establecido en el programa como una constante), el descuento que se le hace por no ser fresca y el coste final total de todas las barras no frescas.
+def panaderia() -> str:
+    """Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. Escribir un programa que comience leyendo el número de barras vendidas que no son del día. Después el programa debe mostrar el precio habitual de una barra de pan (establecido en el programa como una constante), el descuento que se le hace por no ser fresca y el coste final total de todas las barras no frescas.
 
-        :raises:
+    Raises:
+        ValueError: Captura de error para la entrada de datos de tipo int.
+
+    Returns:
+        str: El precio total de las barras de pan que no son del día con el descuento aplicado.
+    """
     
-        :rtype:
-        """
+    panNormal = 3.49
+    descuento = 60
+    
+    try:
+        barras = entradaInt("Introduce la cantidad de pan que quieres comprar: ")
+    
+        return (f"La barra de pan normal sale a {panNormal}€, con el descuento del {descuento}% sale a {barras*descuento/100}€")
+    except ValueError:
+        raise ValueError("Error 001: Por favor introduzca un número")
+
+def spamNombre() -> str:
+    """Escribir un programa que pregunte el nombre del usuario en la consola y un número entero e imprima por pantalla en líneas distintas el nombre del usuario tantas veces como el número introducido.
+
+    Raises:
+        TypeError: Captura de algún error, por si acaso ( no sé si está bien )
+
+    Returns:
+        str: El nombre repetido n veces.
+    """    
+    
+    try:
+
+        nombre = enetradaString("Escribe tu nombre: ")
+        spam = entradaInt("Introduce el número de veces que quieres que se repita: ")
+
+        return (nombre + "\n")*spam
+    except TypeError:
+        raise TypeError("Error desconocido: algo salió mal.")
 
 def elegirEjercicio():
-    """ 
-    Description: Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
+    """Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
 
-    :raises:
-
-    :rtype:
-    """
+    Raises:
+        ValueError: Captura de error para la entrada de datos de tipo int
+        UnboundLocalError: Esto es porque el menú cuando introduces un número que no está contemplado saca este error.
+    """    
 
     textoMenu = """ 
     ~ 𝟘: 𝔼𝕩𝕚𝕥                                                        
@@ -357,23 +390,28 @@ def elegirEjercicio():
     
     
     print(textoMenu)
-    functions = [exit, nombre, importeTotalPorHoras, asignacion, conversionCelsiusFahrenheit, ivaAplicado, desgloseProducto, sumaDeTresNumeros, sumaConDosVariables, sumaSinVariables, operacionAritmetica, enterosPositivos, indiceDeMasaCorporal, division, pesoTotal, calculoInteres]
+    functions = [exit, nombre, importeTotalPorHoras, asignacion, conversionCelsiusFahrenheit, ivaAplicado, desgloseProducto, sumaDeTresNumeros, sumaConDosVariables, sumaSinVariables, operacionAritmetica, enterosPositivos, indiceDeMasaCorporal, division, pesoTotal, calculoInteres, panaderia, spamNombre]
 
     try:
         menu_items = dict(enumerate(functions, start=0))
-        ejercicio = int(input("Elige un ejercicio del 1-16 \n> "))
+        ejercicio = int(input(f"Elige un ejercicio del 1-{len(functions)-1} \n> "))
         selected_value = menu_items[ejercicio]
         salida(selected_value())
     except ValueError:
-        raise ValueError("Error 003: Introduzca un valor dentro del rango" if ejercicio < 0 or ejercicio > 16 else elegirEjercicio())
+        raise ValueError("Error 003: Introduzca un valor dentro del rango" if ejercicio < 0 or ejercicio > len(functions) else elegirEjercicio())
     except UnboundLocalError:
         raise UnboundLocalError("Error 001: Por favor introduzca un número")
     
 # Salida
 def salida(funcion):
+    """Salida de datos del programa, con una llamada recurrente a elegirEjercicio() para que el programa continue.
+
+    Args:
+        funcion (funion): Recibe una función como parametro para imprimirla por consola.
+    """    
+
     print(funcion)
     elegirEjercicio()
-
 
 if __name__ == "__main__":
     elegirEjercicio()

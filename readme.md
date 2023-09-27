@@ -1,4 +1,4 @@
-<!-- ---
+---
 marp: true
 ---
 <style>
@@ -23,13 +23,13 @@ marp: true
         font-size: 40px;
     }
     
-</style> -->
+</style>
 
 # Ejercicios básicos
-![python](./resources/python.jpg)
+![bg left contain](./resources/python.jpg)
 ###### por: Natalia Cortés Bernal
 ---
-<!-- <style scoped>
+<style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -47,12 +47,12 @@ marp: true
         color: black;
     }
     
-</style>  -->
+</style> 
 ## ¿En qué consistirán estos ejercicios?
 
 > Éstos, son una serie de ejercicios en los que tendremos que construir nuestros propios algoritmos para desarrollar los conceptos básicos de la programación usando `python`.
 ---
-<!-- <style scoped>
+<style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -71,12 +71,12 @@ marp: true
         padding: 30px 30px;
     }
     
-</style>  -->
+</style> 
 ## ¿Cómo se han realizado dichos ejercicios?
 > Estos ejercicios, se han realizado en un único archivo, con la implementación de un menú para navegar cómodamente entre los diferentes ejercicios sin necesidad de reiniciar el programa constantemente.
 
 ---
-<!-- <style scoped>
+<style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -95,12 +95,12 @@ marp: true
         padding: 30px 30px;
     }
     
-</style>  -->
+</style> 
 ## ¿Cómo se han realizado dichos ejercicios?
 
 > Además de que se han realizado test a todos ellos de forma que comprobar que funcionan correctamente es mucho más fácil de comprobar, simplemente escribiendo la sentencia **`pytest`** en la terminal.
 ---
-<!-- <style scoped>
+<style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -119,12 +119,12 @@ marp: true
         padding: 30px 30px;
     }
     
-</style>  -->
+</style> 
 ## ¿Cómo usar el programa?
 
 > El programa está pensado para usarlo únicamente en terminal, aunque implementarlo en otra salida ( por ejemplo html ) no sería complicado, para la corrección de los mismos se ha decidido esta opción.
 ---
-<!-- <style scoped>
+<style scoped>
     h1, h2{
         color: black;
         text-align:center;
@@ -143,14 +143,14 @@ marp: true
         padding: 30px 30px;
     }
     
-</style>  -->
+</style> 
 ## ¿Cómo usar el programa?
 
 > Una vez se ejecuta el programa, éste devolverá un un texto con la lista de ejercicios que existen en el programa, 
 
 
 ---
-<!-- <style scoped>
+<style scoped>
     h3{
         font-size: 70px;
         text-align: center;
@@ -167,7 +167,7 @@ marp: true
     a:hover{
         font-weight: bold;
     }
-</style> -->
+</style>
 ### Enlaces
 - [Repositorio](https://github.com/naatii/EjerciciosBasicosPython)
 - [Github](https://github.com/naatii/)

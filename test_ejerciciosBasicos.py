@@ -60,7 +60,9 @@ def test_pesoTotal(monkeypatch):
 def test_calculoInteres(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda numerouno: "12")
     assert calculoInteres() == ("El interés total para primer año: 60\nEl interés total para el segundo año: 72\nEl interés total para el tercer año: 84\n")
-
+def test_panaderia(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda barras: '12')
+    assert panaderia() == (f"La barra de pan normal sale a 3.49€, con el descuento del 60% sale a 7.2€")
 
 
 
