@@ -63,6 +63,10 @@ def test_calculoInteres(monkeypatch):
 def test_panaderia(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda barras: '12')
     assert panaderia() == (f"La barra de pan normal sale a 3.49€, con el descuento del 60% sale a 7.2€")
+def test_spamNombre(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda nombre: 'Natalia')
+    monkeypatch.setattr('builtins.input', lambda spam: '5')
+    assert spamNombre() == ("Natalia \nNatalia \nNatalia \nNatalia \nNatalia")
 
 
 

@@ -1,7 +1,11 @@
-# TODO: Constantes en mayúsuclas
+"""
+TODO: 
+    - Terminar ejercicios desde 1.19.
+    - Intentar hacer el programa con paquetes.
+    - Terminar de hacer las pruebas para todos los ejercicios.
+"""
 
 # Constantes
-
 ERROR001:str = "Error 001: Por favor introduzca un número"
 ERROR002:str = "Error 002: Introduzca un valor dentro del rango"
 ERROR003:str = "Error 003: El número tiene que ser positivo."
@@ -365,7 +369,7 @@ def spamNombre() -> str:
         nombre = entradaString("Escribe tu nombre: ")
         spam = entradaInt("Introduce el número de veces que quieres que se repita: ")
 
-        return (nombre + "\n")*spam
+        return (f"{nombre}\n")*spam
     except TypeError:
         raise TypeError(ERRORDESCONOCIDO)
 
@@ -394,6 +398,7 @@ def letrasNombre() -> str:
     except ValueError:
         raise ValueError(ERRORDESCONOCIDO)
 
+# Función principal del programa
 def elegirEjercicio():
     """Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
 
