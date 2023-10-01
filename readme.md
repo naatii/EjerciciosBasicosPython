@@ -151,6 +151,32 @@ marp: true
 
 ---
 <style scoped>
+    h1, h2{
+        color: black;
+        text-align:center;
+        font-weight: bold;
+        font-size: 60px;
+        border-bottom: 3px solid black;
+        letter-spacing: 10px;
+        /* line-height: 20px; */
+    }
+    section{
+        font-size: 42px;
+        color: black;
+    }
+    blockquote{
+        color: black;
+        padding: 30px 30px;
+    }
+    
+</style> 
+- [x] Realizar programas
+- [x] Realizar test de programas
+- [x] Separar entrada de salida
+- [x] Mejorar el menú para evitar llamadas recursivas
+- [x] Preguntar como hacer el ejercicio 20
+---
+<style scoped>
     h3{
         font-size: 70px;
         text-align: center;

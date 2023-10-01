@@ -3,6 +3,7 @@ TODO:
     - Terminar ejercicios desde 1.19.
     - Intentar hacer el programa con paquetes.
     - Terminar de hacer las pruebas para todos los ejercicios.
+    - Preguntar como hacer el ejercicio 20.
 """
 
 # Constantes
@@ -369,7 +370,7 @@ def spamNombre() -> str:
         nombre = entradaString("Escribe tu nombre: ")
         spam = entradaInt("Introduce el número de veces que quieres que se repita: ")
 
-        return (f"{nombre}\n")*spam
+        return (f"{nombre}\n"*spam)
     except TypeError:
         raise TypeError(ERRORDESCONOCIDO)
 
@@ -393,11 +394,27 @@ def nombreCompleto() -> str:
         raise ValueError(ERRORDESCONOCIDO)
 
 def letrasNombre() -> str:
+    """Escribir un programa que pregunte el nombre del usuario en la consola y después de que el usuario lo introduzca muestre por pantalla "NOMBRE tiene n letras.", donde NOMBRE es el nombre de usuario en mayúsculas y n es el número de letras que tienen el nombre.
+
+    Raises:
+        ValueError: error por si algo sale mal
+
+    Returns:
+        str: retorno del resultado de letras que tiene el nombre
+    """
     try:
-        pass
+        nombre = entradaString("Introduce tu nombre: ")
+        return (f"el nombre {nombre} tiene {len(nombre)} letras.")
     except ValueError:
         raise ValueError(ERRORDESCONOCIDO)
-
+def  telefono():
+    try:
+        telefono = entradaString("Introduce tu número de telefono: ")
+        nuevoTelefono = telefono[4:13]
+        return nuevoTelefono
+    except:
+        raise ValueError(ERRORDESCONOCIDO)
+        
 # Función principal del programa
 def elegirEjercicio():
     """Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
@@ -429,7 +446,7 @@ def elegirEjercicio():
     
     
     print(textoMenu)
-    functions = [exit, nombre, importeTotalPorHoras, asignacion, conversionCelsiusFahrenheit, ivaAplicado, desgloseProducto, sumaDeTresNumeros, sumaConDosVariables, sumaSinVariables, operacionAritmetica, enterosPositivos, indiceDeMasaCorporal, division, pesoTotal, calculoInteres, panaderia, spamNombre, nombreCompleto, letrasNombre]
+    functions = [exit, nombre, importeTotalPorHoras, asignacion, conversionCelsiusFahrenheit, ivaAplicado, desgloseProducto, sumaDeTresNumeros, sumaConDosVariables, sumaSinVariables, operacionAritmetica, enterosPositivos, indiceDeMasaCorporal, division, pesoTotal, calculoInteres, panaderia, spamNombre, nombreCompleto, letrasNombre, telefono]
 
     try:
         menu_items = dict(enumerate(functions, start=0))
