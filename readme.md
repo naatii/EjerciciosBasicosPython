@@ -170,11 +170,11 @@ marp: true
     }
     
 </style> 
-- [x] Realizar programas
-- [x] Realizar test de programas
-- [x] Separar entrada de salida
-- [x] Mejorar el menú para evitar llamadas recursivas
-- [x] Preguntar como hacer el ejercicio 20
+- [x] Realizar programas.
+- [x] Realizar test de programas.
+- [x] Separar entrada de salida.
+- [x] Mejorar el menú para evitar llamadas recursivas.
+- [x] Preguntar como validar la , en el float ejercicio 24.
 ---
 <style scoped>
     h3{

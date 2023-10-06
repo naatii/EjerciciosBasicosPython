@@ -1,4 +1,5 @@
-from ejerciciosBasicos import *
+from src.ejerciciosBasicos import *
+from unittest import mock
 
 def test_nombre(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: "natalia") # Simula la entrada de datos por consola
@@ -38,7 +39,6 @@ def test_sumaSinVariables(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: '12')
     monkeypatch.setattr('builtins.input', lambda _: '12')
     assert sumaDeTresNumeros() == ("La suma total es: 36")
-    
     assert indiceDeMasaCorporal() == "Tu índice de masa corporal es: 1.0"
 def test_operacionAritmetica():
     assert operacionAritmetica() == 0.25
@@ -62,24 +62,38 @@ def test_calculoInteres(monkeypatch):
 def test_panaderia(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda barras: '12')
     assert panaderia() == (f"La barra de pan normal sale a 3.49€, con el descuento del 60% sale a 7.2€")
-# def test_spamNombre(monkeypatch):
-#     monkeypatch.setattr('builtins.input', lambda nombre: 'Natalia')
-#     monkeypatch.setattr('builtins.input', lambda spam: '5')
-#     assert spamNombre() == ("Natalia\nNatalia\nNatalia\nNatalia\nNatalia")
+def test_spamNombre():
+    with mock.patch('builtins.input', side_effect=['John', '2']):
+        assert spamNombre() == "John\nJohn\n"
+def test_nombreCompleto(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda nombreCompleto: 'natalia cortes')
+    assert nombreCompleto() == "El nombre en minusculas: natalia cortes\nNombre completo en mayúsculas: NATALIA CORTES\nNombre completo con la primera en mayúsculas: Natalia Cortes"
+def test_letrasNombre(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda nombreCompleto: 'NATALIA')
+    assert letrasNombre() == "el nombre NATALIA tiene 7 letras."
+def test_telefono(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda telefono: '+34-633657601-56')
+    assert telefono() == 633657601
+def test_frase(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda telefono: 'hola natalia')
 
+    assert frase() == "ailatan aloh"
+def test_fraseMasVocal():
+    with mock.patch('builtins.input', side_effect=['hola mundo', 'a']):
+        assert fraseMasVocal() == "holA mundo"
+def test_email(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda telefono: 'natalia')
+    assert email() == "natalia@eu.es"
+def test_precioConDecimales(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda precio: '20.80')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    assert precioConDecimales() == "número de euros: 20\nel número de centimos: 80"
+def test_parseoFecha(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda precio: '20/12/2023')
+    assert parseoDeFecha() == "Día: 20\nMes: 12\nAño: 2023"
+def test_cesta(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda productos: 'pan, chocolate, leche')
+    assert cesta() == "pan\nchocolate\nleche"
+def test_productoUnitario():
+    with mock.patch('builtins.input', side_effect=['natilla', '200', '20.40']):
+        assert productoUnitario() == "natilla: 200 unidades x     20.40€ =     4080.00€"
