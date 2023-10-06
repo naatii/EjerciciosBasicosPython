@@ -175,6 +175,7 @@ marp: true
 - [x] Separar entrada de salida.
 - [x] Mejorar el menú para evitar llamadas recursivas.
 - [x] Preguntar como validar la , en el float ejercicio 24.
+- [x] Todos los ejercicios terminado y los test.
 ---
 <style scoped>
     h3{

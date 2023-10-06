@@ -540,8 +540,6 @@ def cesta() -> str:
         raise ValueError(ERRORDESCONOCIDO)
     except UnboundLocalError:
         raise UnboundLocalError(ERROR001)
-# Función principal del programa
-
 def productoUnitario()->str:
     """Escribir un programa que pregunte el nombre el un producto, su precio y un número de unidades y muestre por pantalla una cadena con el nombre del producto seguido de su precio unitario con 6 dígitos enteros y 2 decimales, el número de unidades con tres dígitos y el coste total con 8 dígitos enteros y 2 decimales.
 
@@ -552,17 +550,17 @@ def productoUnitario()->str:
     Returns:
         str: devolución del producto con su producto, la cantidad y el total
     """
-
     try:
         producto:str = entradaString("Escribe el nombre del producto: ")
         unidades:int = entradaInt("Escribe el número de unidades: ")
         precio:float = entradaFloat("Escribe el precio del producto: ")
         total = precio * unidades
-        return f'{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'
+        return f'{producto}\t |\t{unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'
     except ValueError:
-        raise ValueError(ERRORDESCONOCIDO)
+        raise ValueError(ERRORDESCONOCIDO) # x.yf x el número max q se permite \\ y el número max pero de decimales
     except UnboundLocalError:
         raise UnboundLocalError(ERROR001)
+# Función principal del programa
 def elegirEjercicio():
     """Menú para la selección de ejercicios a elección del usuario y salida del programa en caso de que el usuario así lo desee.
 
