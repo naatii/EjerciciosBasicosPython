@@ -1,6 +1,10 @@
 from src.ejerciciosBasicos import *
 from unittest import mock
 
+"""
+el parametro mnkeypatch es una utilidad que encontré en internet para simular inputs en las funciones de los test
+"""
+
 def test_nombre(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: "natalia") # Simula la entrada de datos por consola
     assert nombre() == "hola natalia"
