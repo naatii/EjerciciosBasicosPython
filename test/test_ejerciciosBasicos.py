@@ -95,5 +95,6 @@ def test_cesta(monkeypatch):
     monkeypatch.setattr('builtins.input', lambda productos: 'pan, chocolate, leche')
     assert cesta() == "pan\nchocolate\nleche"
 def test_productoUnitario():
+
     with mock.patch('builtins.input', side_effect=['natilla', '200', '20.40']):
-        assert productoUnitario() == "natilla: 200 unidades x     20.40€ =     4080.00€"
+        assert productoUnitario() == "natilla\t |\t200 unidades x     20.40€ =     4080.00€"
